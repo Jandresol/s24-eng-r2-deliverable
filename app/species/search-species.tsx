@@ -1,6 +1,4 @@
 'use client'
-import { Separator } from "@/components/ui/separator";
-import { TypographyH2 } from "@/components/ui/typography";
 import { createBrowserSupabaseClient } from "@/lib/client-utils";
 import type { Database } from "@/lib/schema";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
@@ -56,8 +54,6 @@ export default function SearchSpecies({ sessionId }: { sessionId: string }) {
           className="border p-2"
         />
       </div>
-      <TypographyH2>Search Results</TypographyH2>
-      <Separator className="my-4" />
       <div className="flex flex-wrap justify-center">
         {allSpecies
           .filter(

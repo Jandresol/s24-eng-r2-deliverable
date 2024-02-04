@@ -156,7 +156,7 @@ export default function EditSpeciesDialog({ userId, species }: { userId: string;
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="secondary">
+        <Button className="mt-3 w-full" variant="secondary">
           <Icons.pencil className="mr-3 h-5 w-5" />
           Edit Species
         </Button>

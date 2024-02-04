@@ -15,6 +15,7 @@ import Image from "next/image";
 type Species = Database["public"]["Tables"]["species"]["Row"];
 import LearnMoreDialog from "./learn-more-dialog";
 import EditSpeciesDialog from "./edit-species-dialog";
+import DeleteSpeciesDialog from "./delete-species-dialog";
 
 export default function SpeciesCard({ species, userId }: { species: Species; userId: string }) {
   const userCanEdit = species.author === userId;
@@ -33,6 +34,7 @@ export default function SpeciesCard({ species, userId }: { species: Species; use
       {userCanEdit && (
         <div className="mt-2">
           <EditSpeciesDialog userId={userId} species={species} />
+          <DeleteSpeciesDialog species={species} />
         </div>
       )}
     </div>
